@@ -1,3 +1,17 @@
+/*
+index.html remains unchanged. No JavaScript was used. All the styling code is placed in main.css as you can see.
+
+Layout (CSS Grid);
+I used CSS grid on .page-wrapper for the construction of the full page layout. Users with a smaller display will see the stack as Intro -> Main -> Sidebar.
+While normal screens (like 900px or more) its a 2-column grid; content on left | sidebar on right.
+Flexbox;
+I have applied flexbox in the main footer links section so the links align and that they wrap on smaller displays. I used it for spacing out items in sidebar lists too.
+Visual Design;
+Added a dark gradient background with soft glowing effects. I added subtle background overlay animation, an RGB flow is what codepilot calls it. I used glass style cards with semi transparent backgrounds and blur. Added hover styles for links and content blocks: lift, glow and color.
+Responsiveness & Usability;
+Responsive rules at 900px + in order to adjust the layout. prefers-reduced-motion is used to turn off animation for the users who want to reduce motion. I also removed horizontal scrolling by specifying overflow-x: hidden.
+*/
+
 *,
 *::before,
 *::after {
@@ -393,3 +407,4 @@ aside.sidebar nav ul,
     transform: translate(1%, 3%) rotate(-10deg) scale(1.04);
   }
 }
+
