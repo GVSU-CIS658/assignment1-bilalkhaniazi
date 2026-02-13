@@ -316,13 +316,11 @@ aside.sidebar nav ul,
   color: rgba(255, 122, 217, 0.95);
 }
 
-.extra1,
-.extra2,
-.extra3,
-.extra4,
-.extra5,
-.extra6 {
-  display: none;
+.extra1, .extra2, .extra3, .extra4, .extra5, .extra6 {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
 }
 
 @media (min-width: 900px) {
@@ -356,3 +354,4 @@ aside.sidebar nav ul,
   background: rgba(98, 255, 214, 0.28);
   color: #0b0f1a;
 }
+
