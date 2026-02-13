@@ -10,13 +10,16 @@ html {
 
 body {
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
   color: #eaf0ff;
-  background: radial-gradient(1200px 600px at 20% 10%, rgba(255, 255, 255, 0.12), transparent 60%),
+
+  background:
+    radial-gradient(1200px 600px at 20% 10%, rgba(255, 255, 255, 0.12), transparent 60%),
     radial-gradient(1000px 500px at 80% 20%, rgba(120, 90, 255, 0.18), transparent 60%),
     radial-gradient(1200px 700px at 50% 90%, rgba(0, 255, 200, 0.10), transparent 60%),
     linear-gradient(135deg, #0b0f1a 0%, #0b1020 30%, #0a0c18 100%);
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
-  line-height: 1.7;
+
   overflow-x: hidden;
 }
 
@@ -26,14 +29,15 @@ a {
 }
 
 abbr[title] {
-  text-decoration: none;
   border-bottom: 1px dotted rgba(255, 255, 255, 0.45);
+  text-decoration: none;
 }
 
 .page-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 28px 18px 48px;
+
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -46,9 +50,15 @@ abbr[title] {
 .intro {
   grid-area: intro;
   position: relative;
-  border-radius: 22px;
   padding: 26px 22px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.06));
+  border-radius: 22px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.10),
+    rgba(255, 255, 255, 0.06)
+  );
+
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
   overflow: hidden;
@@ -58,20 +68,27 @@ abbr[title] {
   content: "";
   position: absolute;
   inset: -2px;
-  background: conic-gradient(from 180deg at 50% 50%,
+
+  background: conic-gradient(
+    from 180deg at 50% 50%,
     rgba(120, 90, 255, 0.0),
     rgba(120, 90, 255, 0.35),
     rgba(0, 255, 200, 0.28),
     rgba(255, 90, 180, 0.22),
-    rgba(120, 90, 255, 0.0));
+    rgba(120, 90, 255, 0.0)
+  );
+
   filter: blur(18px);
   opacity: 0.55;
   pointer-events: none;
+
   animation: auraSpin 10s linear infinite;
 }
 
 @keyframes auraSpin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .intro header[role="banner"] {
@@ -79,6 +96,7 @@ abbr[title] {
   z-index: 1;
   padding: 18px 16px 12px;
   border-radius: 18px;
+
   background: rgba(10, 12, 22, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.10);
   backdrop-filter: blur(10px);
@@ -86,25 +104,33 @@ abbr[title] {
 
 .intro header h1 {
   margin: 0;
-  font-size: clamp(2.1rem, 4vw, 3.4rem);
-  letter-spacing: -0.03em;
+  font-size: 3rem;
   line-height: 1.05;
+  letter-spacing: -0.03em;
+
   background: linear-gradient(90deg, #8aa6ff 0%, #62ffd6 35%, #ff7ad9 70%, #8aa6ff 100%);
   background-size: 180% 100%;
+  color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+
   animation: titleGlow 6s ease-in-out infinite;
 }
 
 @keyframes titleGlow {
-  0%, 100% { background-position: 0% 50%; filter: drop-shadow(0 10px 22px rgba(98, 255, 214, 0.22)); }
-  50% { background-position: 100% 50%; filter: drop-shadow(0 14px 26px rgba(255, 122, 217, 0.22)); }
+  0%, 100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 10px 22px rgba(98, 255, 214, 0.22));
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 14px 26px rgba(255, 122, 217, 0.22));
+  }
 }
 
 .intro header h2 {
   margin: 10px 0 0;
-  font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+  font-size: 1.2rem;
   font-weight: 600;
   color: rgba(234, 240, 255, 0.92);
 }
@@ -114,8 +140,9 @@ abbr[title] {
   position: relative;
   z-index: 1;
   margin-top: 14px;
-  border-radius: 18px;
   padding: 18px 16px;
+  border-radius: 18px;
+
   background: rgba(10, 12, 22, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.10);
   backdrop-filter: blur(10px);
@@ -135,7 +162,6 @@ abbr[title] {
 .preamble h3 {
   margin: 0 0 10px;
   font-size: 1.25rem;
-  letter-spacing: -0.01em;
   color: rgba(234, 240, 255, 0.95);
 }
 
@@ -148,13 +174,19 @@ abbr[title] {
 
 .main.supporting > div[role="article"],
 .main.supporting footer {
-  border-radius: 20px;
   padding: 20px 18px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.06));
+  border-radius: 20px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.10),
+    rgba(255, 255, 255, 0.06)
+  );
+
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: 0 16px 45px rgba(0, 0, 0, 0.40);
-  transform: translateY(0);
-  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .main.supporting > div[role="article"]:hover {
@@ -166,7 +198,6 @@ abbr[title] {
 .main.supporting h3 {
   margin: 0 0 10px;
   font-size: 1.3rem;
-  letter-spacing: -0.01em;
   color: rgba(234, 240, 255, 0.96);
 }
 
@@ -181,7 +212,7 @@ abbr[title] {
 
 .main.supporting a {
   color: rgba(98, 255, 214, 0.95);
-  font-weight: 650;
+  font-weight: bold;
 }
 
 .main.supporting a:hover {
@@ -201,13 +232,16 @@ abbr[title] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   min-width: 56px;
   padding: 10px 14px;
   border-radius: 12px;
+
   background: rgba(10, 12, 22, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.12);
   color: rgba(234, 240, 255, 0.92);
-  transition: transform 200ms ease, background 200ms ease, border-color 200ms ease;
+
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 .main.supporting footer a:hover {
@@ -218,12 +252,18 @@ abbr[title] {
 
 aside.sidebar {
   grid-area: sidebar;
-  border-radius: 22px;
+  position: relative;
   padding: 18px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.06));
+  border-radius: 22px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.10),
+    rgba(255, 255, 255, 0.06)
+  );
+
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: 0 18px 55px rgba(0, 0, 0, 0.45);
-  position: relative;
   overflow: hidden;
 }
 
@@ -231,9 +271,12 @@ aside.sidebar::before {
   content: "";
   position: absolute;
   inset: -60px;
-  background: radial-gradient(circle at 30% 20%, rgba(98, 255, 214, 0.18), transparent 55%),
+
+  background:
+    radial-gradient(circle at 30% 20%, rgba(98, 255, 214, 0.18), transparent 55%),
     radial-gradient(circle at 70% 40%, rgba(255, 122, 217, 0.14), transparent 55%),
     radial-gradient(circle at 45% 80%, rgba(138, 166, 255, 0.16), transparent 55%);
+
   filter: blur(18px);
   opacity: 0.8;
   pointer-events: none;
@@ -250,7 +293,6 @@ aside.sidebar h3 {
   margin: 0 0 10px;
   font-size: 1.05rem;
   color: rgba(234, 240, 255, 0.96);
-  letter-spacing: 0.01em;
 }
 
 .design-selection,
@@ -258,6 +300,7 @@ aside.sidebar h3 {
 .zen-resources {
   border-radius: 18px;
   padding: 16px 14px;
+
   background: rgba(10, 12, 22, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.10);
   backdrop-filter: blur(10px);
@@ -268,6 +311,7 @@ aside.sidebar nav ul,
   list-style: none;
   padding: 0;
   margin: 0;
+
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -276,11 +320,13 @@ aside.sidebar nav ul,
 .design-selection nav ul li,
 .design-archives nav ul li,
 .zen-resources ul li {
-  padding: 12px 12px;
+  padding: 12px;
   border-radius: 14px;
+
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.10);
-  transition: transform 200ms ease, border-color 200ms ease, background 200ms ease;
+
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .design-selection nav ul li:hover,
@@ -292,8 +338,7 @@ aside.sidebar nav ul,
 }
 
 .design-selection a.design-name {
-  display: inline-block;
-  font-weight: 750;
+  font-weight: bold;
   color: rgba(98, 255, 214, 0.95);
 }
 
@@ -303,24 +348,17 @@ aside.sidebar nav ul,
 }
 
 .design-archives .indicator {
-  font-weight: 800;
+  font-weight: bold;
   margin-left: 6px;
 }
 
 .zen-resources a {
   color: rgba(138, 166, 255, 0.95);
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .zen-resources a:hover {
   color: rgba(255, 122, 217, 0.95);
-}
-
-.extra1, .extra2, .extra3, .extra4, .extra5, .extra6 {
-  opacity: 0;
-  pointer-events: none;
-  height: 0;
-  overflow: hidden;
 }
 
 @media (min-width: 900px) {
@@ -336,10 +374,6 @@ aside.sidebar nav ul,
     position: sticky;
     top: 18px;
   }
-
-  .main.supporting {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -354,4 +388,3 @@ aside.sidebar nav ul,
   background: rgba(98, 255, 214, 0.28);
   color: #0b0f1a;
 }
-
